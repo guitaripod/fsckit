@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Question {
+public struct Question: Identifiable {
     public let id: UUID
     public let title: String
     public let choices: [String]
