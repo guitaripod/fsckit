@@ -6,7 +6,7 @@ final class Question_Tests: XCTestCase {
 
     func testCaliforniaQuestionsCount() {
         let californiaQuestions = Question.californiaQuestions
-        XCTAssertEqual(californiaQuestions.count, 189)
+        XCTAssertEqual(californiaQuestions.count, 5)
     }
 
     func testQuestionAnswers() {
@@ -14,14 +14,14 @@ final class Question_Tests: XCTestCase {
         XCTAssertEqual(question.correctAnswer, "False")
         let question2 = Question.californiaQuestions[4]
         XCTAssertEqual(question2.correctAnswer, "None of the above")
-        let question3 = Question.californiaQuestions[5]
-        XCTAssertEqual(question3.correctAnswer, "Follower")
-        let question4 = Question.californiaQuestions[6]
+        let question3 = Question.californiaQuestions[4]
+        XCTAssertEqual(question3.correctAnswer, "None of the above")
+        let question4 = Question.californiaQuestions[3]
         XCTAssertEqual(question4.correctAnswer, "False")
-        let question5 = Question.californiaQuestions[7]
-        XCTAssertEqual(question5.correctAnswer, "Tell an Adult")
-        let question6 = Question.californiaQuestions[8]
-        XCTAssertEqual(question6.correctAnswer, "True")
+        let question5 = Question.californiaQuestions[2]
+        XCTAssertEqual(question5.correctAnswer, "All of the above")
+        let question6 = Question.californiaQuestions[1]
+        XCTAssertEqual(question6.correctAnswer, "Choke")
     }
 
     func testRandomQuestions() {
@@ -31,11 +31,11 @@ final class Question_Tests: XCTestCase {
 
     func testTrueFalseQuestions() {
         let trueFalseQuestions = Question.trueFalseCaliforniaQuestions
-        XCTAssertEqual(trueFalseQuestions.count, 80)
+        XCTAssertEqual(trueFalseQuestions.count, 2)
     }
 
     func testMultipleChoiceQuestions() {
         let multipleChoiceQuestions = Question.multipleChoiceCaliforniaQuestions
-        XCTAssertEqual(multipleChoiceQuestions.count, 109)
+        XCTAssertEqual(multipleChoiceQuestions.count, 3)
     }
 }
